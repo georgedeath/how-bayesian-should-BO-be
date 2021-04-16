@@ -1,1 +1,1 @@
-# how-bayesian-should-bayesopt-be
+# how-bayesian-should-BO-be
