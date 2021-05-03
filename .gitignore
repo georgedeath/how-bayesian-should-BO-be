@@ -1,0 +1,13 @@
+# Byte-compiled / optimized / DLL files
+__pycache__
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Exclude machine-specific vs code settings
+.vscode
+
+*egreedy*
+FBBO - map vs mcmc plots.ipynb
+MAP_plot.npz
+MCMC_plot.pt
