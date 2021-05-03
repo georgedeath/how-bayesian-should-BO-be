@@ -25,6 +25,10 @@ If you use any part of this code in your work, please cite:
 }
 ```
 
+## Core packages
+
+- [PyMC3](https://github.com/pymc-devs/pymc3), [PyTorch](https://github.com/pytorch/pytorch), [BoTorch](https://github.com/pytorch/botorch), [gpytorch](https://github.com/cornellius-gp/gpytorch), [pyDOE2](https://pypi.org/project/pyDOE2/), [tqdm](https://github.com/tqdm/tqdm), [NumPy](https://github.com/numpy/numpy), [SciPy](https://github.com/scipy/scipy), and [matplotlib](https://github.com/matplotlib/matplotlib).
+
 ## Reproduction of experiments
 
 The python file `run_exp.py` provides a convenient way to reproduce an individual experimental evaluation carried out the paper. It has the following syntax:
@@ -38,14 +42,14 @@ usage: run_exp.py [-h] --problem {Branin, Eggholder, GoldsteinPrice, SixHumpCame
                                   Ackley:10}
                   --run_no RUN_NO
                   --method {map, vimf, vifr, mcmc_pm3}
-                  --acq_name {ei,ucb}
+                  --acq_name {ei, ucb}
                   [--budget BUDGET]
                   [--noise {0, 0.05, 0.1, 0.2}]
                   [--ard]
                   [--verbose]
 ```
 
-In order to run the all experiments carried in this paper, e.g.  on a single 8-core machine, will take roughly 80 years, and, therefore, the use of high-performance computing resources is highly recommended.
+In order to run the all experiments carried in this paper, e.g. on a single 8-core machine, will take approximately 80 years, and, therefore, the use of high-performance computing resources is highly recommended.
 
 ## Reproduction of figures and tables in the paper
 
