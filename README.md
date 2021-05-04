@@ -3,7 +3,7 @@
 This repository contains the Python3 code for the experiments presented in:
 > George De Ath, Richard M. Everson, and Jonathan E. Fieldsend.  2021.  How Bayesian Should Bayesian Optimisation Be? In Genetic and Evolutionary Computation Conference Companion (GECCO 21 Companion), July 10--14, 2021, Lille, France. ACM, New York, NY, USA, 10 pages.</br>
 > **Paper**: <https://doi.org/10.1145/3449726.3463164> (to appear)</br>
-> **Preprint**: <https://arxiv.org/abs/TBA>
+> **Preprint**: <https://arxiv.org/abs/2105.00894>
 
 The repository also contains all training data used for the initialisation of the optimisation runs carried out, the optimisation results of each of the runs, and jupyter notebooks to generate the results, figures and tables in the paper.
 
