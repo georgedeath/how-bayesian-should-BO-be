@@ -61,7 +61,7 @@ In order to run the all experiments carried in this paper, e.g. on a single 8-co
 
 ## Training data
 
-The initial training locations for each of the 51 sets of [Latin hypercube](https://www.jstor.org/stable/1268522) samples for the various noise levels are located in the `data` and `data_X.X` directories in this repository, where `X.X` corresponds to the noise level. The files have the following naming structure: `ProblemName_number`, e.g. the first set of training locations for the Branin problem is stored in `Branin_001.npz`. Each of these files is a compressed numpy file created with [torch.save](https://pytorch.org/docs/stable/torch.html#torch.save). It has two [torch.tensor](https://pytorch.org/docs/stable/torch.html#torch.tensor) arrays (`Xtr` and `Ytr`) containing the 2*D initial locations and their corresponding fitness values. Note that for problems that have a non-default dimensionality (e.g. Ackley with d=5), then the data files have the dimensionality appended, e.g. `Ackley5_001.pt`; see the suite of [available test problems](fbbo/test_problems/synthetic_problems.py). To load and inspect the training data, use the following instructions:
+The initial training locations for each of the 51 sets of [Latin hypercube](https://www.jstor.org/stable/1268522) samples for the various noise levels are located in the `data` and `data_X.X` directories in this repository, where `X.X` corresponds to the noise level. The files have the following naming structure: `ProblemName_number`, e.g. the first set of training locations for the Branin problem is stored in `Branin_001.npz`. Each of these files is a compressed torch file created with [torch.save](https://pytorch.org/docs/stable/torch.html#torch.save). It has two [torch.tensor](https://pytorch.org/docs/stable/torch.html#torch.tensor) arrays (`Xtr` and `Ytr`) containing the 2*D initial locations and their corresponding fitness values. Note that for problems that have a non-default dimensionality (e.g. Ackley with d=5), then the data files have the dimensionality appended, e.g. `Ackley5_001.pt`; see the suite of [available test problems](fbbo/test_problems/synthetic_problems.py). To load and inspect the training data, use the following instructions:
 
 ```python
 > python
@@ -80,7 +80,7 @@ The results of all optimisation runs can be found in the `results` and `results_
 ```python
 > python
 >>> import torch
->>> data = data = torch.load('results/fbbo_200_ARD_map_ei_Ackley5_run=001.pt')
+>>> data = torch.load('results/fbbo_200_ARD_map_ei_Ackley5_run=001.pt')
 >>> Xtr = data['Xtr']  # Evaluated locations
 >>> Ytr = data['Ytr']  # Corresponding function values
 >>> Xtr.shape, Ytr.shape
